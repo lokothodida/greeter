@@ -1,0 +1,3 @@
+"en", "Good morning, {{firstName}}!", "Good afternoon, {{firstName}}!", "Good evening, {{firstName}}!",
+"fr", "Bonjour, {{firstName}}", "Bonjour, {{firstName}}", "Bonsoir, {{firstName}}!"
+"jp", "Ohayō gozaimasu, {{lastName}}-san!", "Konnichiwa, {{lastName}}-san!", "Konbanwa, {{lastName}}-san!"

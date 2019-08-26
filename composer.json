@@ -1,0 +1,21 @@
+{
+    "name": "lokothodida/greeting",
+    "require-dev": {
+        "behat/behat": "^3.5",
+        "phpunit/phpunit": "^8.3"
+    },
+    "authors": [
+        {
+            "name": "Lawrence Okoth-Odida",
+            "email": "lawrence.okothodida@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "lokothodida\\Greeting\\": "src"
+        }
+    }
+}
