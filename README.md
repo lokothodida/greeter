@@ -17,7 +17,20 @@ allow the internal clock to be changed for demonstrations.
 greet(string $username, string $language): string
 ```
 
+## Requirements
+* PHP 7.2+
+
+## Initialization
+```
+$ make init
+```
+
 ## Running the code
 ```
 $ ./bin/greet -u [username] -l [language]
+```
+
+## Running tests
+```
+$ make test
 ```

@@ -18,9 +18,9 @@ $dotenv->load();
 
 $container = [
     'local_system_clock' => new LocalSystemClock(),
-    'frozen_clock' => new FrozenClock(new DateTimeImmutable('2019-01-01 18:00:00')),
-    'csv_file_greeter_repository' => new CsvFileGreeterRepository(__DIR__ . '/../data/greetings.csv'),
-    'csv_file_user_repository' => new CsvFileUserRepository(__DIR__ . '/../data/users.csv'),
+    'frozen_clock' => new FrozenClock(new DateTimeImmutable(getenv('FROZEN_CLOCK_TIME'))),
+    'csv_file_greeter_repository' => new CsvFileGreeterRepository(realpath(getenv('GREETINGS_CSV_FILE'))),
+    'csv_file_user_repository' => new CsvFileUserRepository(realpath(getenv('USERS_CSV_FILE'))),
 ];
 
 $container['clock'] = $container[getenv('CLOCK')];
