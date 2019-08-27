@@ -1,4 +1,6 @@
 # Greeting
+[![Build Status](https://travis-ci.com/lokothodida/greeter.svg?branch=master)](https://travis-ci.org/lokothodida/greeter)
+
 This repo houses a sample application designed to showcase
 some of the architectural benefits of dependency injection.
 
@@ -27,7 +29,7 @@ $ make init
 
 ## Running the code
 ```
-$ ./bin/greet -u [username] -l [language]
+$ bin/greet -u [username] -l [language]
 ```
 
 ## Running tests
