@@ -1,4 +1,4 @@
-.PHONY: test
+.PHONY: test web
 
 test: phpunit phpstan
 
@@ -14,3 +14,6 @@ init: env
 
 env:
 	cp .env.dist .env
+
+web:
+	php -S 0.0.0.0:8000 -t web/public web/public/index.php

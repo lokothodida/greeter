@@ -32,6 +32,13 @@ $ make init
 $ bin/greet -u [username] -l [language]
 ```
 
+## Web server
+```
+$ make web
+```
+
+Go to `http://localhost:8000?user=[username]&lang=[language]`.
+
 ## Running tests
 ```
 $ make test
