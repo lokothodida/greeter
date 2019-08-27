@@ -16,7 +16,7 @@ final class SimpleEnglishGreeter implements Greeter
         return sprintf('Good afternoon, %s!', $user->firstName());
     }
 
-    public function sayGoodEvening(User $username): string
+    public function sayGoodEvening(User $user): string
     {
         return sprintf('Good evening, %s!', $user->firstName());
     }

@@ -10,6 +10,9 @@ use lokothodida\Greeting\{
 
 final class CsvFileGreeterRepository implements GreeterRepository
 {
+    /**
+     * @var array<string, Greeter>
+     */
     private $greeters = [];
 
     public function __construct(string $filename)
@@ -26,12 +29,10 @@ final class CsvFileGreeterRepository implements GreeterRepository
         return $this->greeters[$language];
     }
 
-    public function loadFromFile(string $filename): void
+    private function loadFromFile(string $filename): void
     {
-        $rows = array_map('str_getcsv', file($filename));
-
-        foreach (file($filename) as $line) {
-            $row = str_getcsv($line);
+        foreach ((array) file($filename) as $line) {
+            $row = (array) str_getcsv((string) $line);
 
             $this->greeters[$row[0]] = new StringTemplateGreeter($row[1], $row[2], $row[3]);
         }

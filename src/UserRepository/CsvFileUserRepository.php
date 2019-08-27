@@ -25,12 +25,10 @@ final class CsvFileUserRepository implements UserRepository
         return $this->users[$username];
     }
 
-    public function loadFromFile(string $filename): void
+    private function loadFromFile(string $filename): void
     {
-        $rows = array_map('str_getcsv', file($filename));
-
-        foreach (file($filename) as $line) {
-            $row = str_getcsv($line);
+        foreach ((array) file($filename) as $line) {
+            $row = str_getcsv((string) $line);
 
             $this->users[$row[0]] = new User($row[0], $row[1], $row[2]);
         }
